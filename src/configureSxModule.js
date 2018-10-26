@@ -135,11 +135,13 @@ define([
 		//     A graphic representation intended to convey a message without the use of words. It may represent a
 		//     hazard, a hazardous situation, a precaution to avoid a hazard, a result of not avoiding a hazard, or
 		//     any combination of these messages.
-		configureAsImageInFrame(sxModule, 'self::hazardsymbol', t('hazard symbol'), 'href', {
+		configureAsImageInFrame(sxModule, 'self::hazardsymbol', t('hazard symbol'), {
 			contextualOperations: [
 				{ name: ':contextual-edit-hazardsymbol' },
 				{ name: ':hazardsymbol-insert-alt' }
-			]
+			],
+			referenceQuery: '@href',
+			isPermanentId: true
 		});
 
 		// howtoavoid
